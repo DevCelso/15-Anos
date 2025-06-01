@@ -1,0 +1,1 @@
+const countdow = document.getElementById("countdown");
