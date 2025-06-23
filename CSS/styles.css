@@ -1,3 +1,4 @@
+/* Corpo*/
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -39,12 +40,6 @@ h1 {
     color: #333;
 }
 
-footer {
-    padding: 20px;
-    background-color: #eaeaea;
-    font-size: 0.9rem;
-}
-
 .secao h2 {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -54,4 +49,118 @@ footer {
 .secao p {
     margin-bottom: 20px;
     font-size: 1.1rem;
+}
+
+/*Carrosel de fotos*/
+section.slider {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+    height: 550px;
+
+}
+
+.slider-content {
+    width: 400%;
+    display: flex;
+    transition: 1s;
+}
+
+.slider-content input,
+.img-mobile {
+    display: none;
+}
+
+.slide-box {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* mantém a proporção sem distorcer */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Navegação automática e manual */
+.nav-auto,
+.nav-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.manual-btn,
+.nav-auto div {
+    border: 2px solid #4a90e2;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.manual-btn:hover {
+    background-color: #4a90e2;
+}
+
+#radio1:checked~.nav-auto .auto-btn1,
+#radio2:checked~.nav-auto .auto-btn2,
+#radio3:checked~.nav-auto .auto-btn3 {
+    background-color: #4a90e2;
+}
+
+#radio1:checked~.primeiro {
+    margin-left: 0%;
+}
+
+#radio2:checked~.primeiro {
+    margin-left: -25%;
+}
+
+#radio3:checked~.primeiro {
+    margin-left: -50%;
+}
+
+@media screen and (max-width: 900px) {
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+    }
+
+    .nav-auto,
+    .nav-manual {
+        bottom: 5%;
+    }
+}
+
+#galeria h2 {
+    color: #4a90e2;
+    font-size: 2rem;
+}
+
+#galeria p {
+    color: #777;
+    font-style: italic;
+}
+
+
+
+
+/*Rodape*/
+footer {
+    padding: 20px;
+    background-color: #eaeaea;
+    font-size: 0.9rem;
 }

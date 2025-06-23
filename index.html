@@ -7,6 +7,8 @@
     <title>15 Anos da Rafaela</title>
     <link rel="stylesheet" href="CSS/styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -19,8 +21,49 @@
             <div id="countdown" class="countdown"></div>
         </div>
 
+        <!-- Carrossel de fotos -->
+        <section id="galeria" class="slider">
+            <h2>Galeria de Fotos</h2>
+            <p>Veja alguns momentos especiais 💙</p>
 
-        <div></div>
+            <div class="slider-content">
+
+                <input type="radio" name="btn-radio" id="radio1" checked>
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+
+                <div class="slide-box primeiro">
+                    <img class="img-desktop" src="imagem/FotoRafa1.jpg" alt="Foto 1">
+                    <img class="img-mobile" src="imagem/FotoRafa1.jpg" alt="Foto 1">
+                </div>
+
+                <div class="slide-box">
+                    <img class="img-desktop" src="imagem/FotoRafa2.jpg" alt="Foto 2">
+                    <img class="img-mobile" src="imagem/FotoRafa2.jpg" alt="Foto 2">
+                </div>
+
+                <div class="slide-box">
+                    <img class="img-desktop" src="imagem/FotoRafa3.jpg" alt="Foto 3">
+                    <img class="img-mobile" src="imagem/FotoRafa3.jpg" alt="Foto 3">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+
+            </div>
+        </section>
+
+
+
 
 
         <section id="rsvp" class="secao">
@@ -39,7 +82,25 @@
         <p>&copy; Site criado com ❤️ por Celso</p>
     </footer>
 
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+
     <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
