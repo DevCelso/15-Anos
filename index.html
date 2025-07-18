@@ -21,48 +21,43 @@
             <div id="countdown" class="countdown"></div>
         </div>
 
+        <div class="event-date">
+            📅 Sábado, 6 de Setembro de 2025 às 11h00
+        </div>
+
+
         <!-- Carrossel de fotos -->
-        <section id="galeria" class="slider">
+        <section id="galeria">
             <h2>Galeria de Fotos</h2>
             <p>Veja alguns momentos especiais 💙</p>
 
-            <div class="slider-content">
-
-                <input type="radio" name="btn-radio" id="radio1" checked>
-                <input type="radio" name="btn-radio" id="radio2">
-                <input type="radio" name="btn-radio" id="radio3">
-
-                <div class="slide-box primeiro">
-                    <img class="img-desktop" src="imagem/FotoRafa1.jpg" alt="Foto 1">
-                    <img class="img-mobile" src="imagem/FotoRafa1.jpg" alt="Foto 1">
+            <div class="slider-wrapper slider">
+                <div class="slider-content">
+                    <div class="slide-box">
+                        <img class="img-mobile" src="imagem/FotoRafa1.jpg" alt="Foto 1">
+                    </div>
+                    <div class="slide-box">
+                        <img class="img-mobile" src="imagem/FotoRafa2.jpg" alt="Foto 2">
+                    </div>
+                    <div class="slide-box">
+                        <img class="img-mobile" src="imagem/FotoRafa3.jpg" alt="Foto 3">
+                    </div>
                 </div>
 
-                <div class="slide-box">
-                    <img class="img-desktop" src="imagem/FotoRafa2.jpg" alt="Foto 2">
-                    <img class="img-mobile" src="imagem/FotoRafa2.jpg" alt="Foto 2">
-                </div>
-
-                <div class="slide-box">
-                    <img class="img-desktop" src="imagem/FotoRafa3.jpg" alt="Foto 3">
-                    <img class="img-mobile" src="imagem/FotoRafa3.jpg" alt="Foto 3">
-                </div>
-
-                <div class="nav-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                </div>
-
-                <div class="nav-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                </div>
-
+                <button class="carousel-nav-btn prev-btn">❮</button>
+                <button class="carousel-nav-btn next-btn">❯</button>
             </div>
+
+            <!-- <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div> -->
+
+            <input type="radio" name="btn-radio" id="radio1" checked style="display: none;">
+            <input type="radio" name="btn-radio" id="radio2" style="display: none;">
+            <input type="radio" name="btn-radio" id="radio3" style="display: none;">
         </section>
-
-
 
 
 
