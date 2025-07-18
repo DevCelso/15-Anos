@@ -22,7 +22,7 @@ setInterval(updateCountdown, 1000);
 updateCountdown();
 
 
-
+// Carrossel de imagens
 const sliderContent = document.querySelector('.slider-content');
 const slides = document.querySelectorAll('.slide-box');
 const prevBtn = document.querySelector('.prev-btn');

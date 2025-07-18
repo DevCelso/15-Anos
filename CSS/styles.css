@@ -43,7 +43,8 @@ h1 {
 }
 
 .secao h2 {
-    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
     margin-bottom: 10px;
     color: #4a90e2;
 }
@@ -75,8 +76,9 @@ section#galeria {
 
 /* Títulos e Parágrafos (Centralizados) */
 #galeria h2 {
+    font-family: 'Dancing Script', cursive;
     color: #4a90e2;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 10px;
 }
