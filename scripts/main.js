@@ -98,3 +98,38 @@ if (carouselContainer) { // Garante que o elemento exista
 
 window.addEventListener('resize', updateCarousel);
 updateCarousel(); // Inicializa o carrossel
+
+
+//Envelope
+document.addEventListener('DOMContentLoaded', () => {
+    const invitationOverlay = document.getElementById('invitation-overlay');
+    const invitationCard = document.querySelector('.invitation-card');
+
+    if (invitationOverlay && invitationCard) {
+        // Exibir o convite assim que a página carrega
+        invitationOverlay.style.opacity = '1';
+        invitationOverlay.style.visibility = 'visible';
+
+        // Adicionar evento de clique para fechar o convite
+        invitationOverlay.addEventListener('click', () => {
+            // Adiciona a classe para iniciar a animação de "abertura" do card
+            invitationCard.classList.add('open');
+
+            // Adiciona a classe para esconder o overlay completo
+            // Atrasamos um pouco para a animação do card começar
+            setTimeout(() => {
+                invitationOverlay.classList.add('hidden');
+            }, 500); // Meio segundo de atraso para a animação do card
+
+            // Opcional: Remover o overlay completamente do DOM após a transição
+            // para garantir que não haja interações ou sobreposições.
+            invitationOverlay.addEventListener('transitionend', function handler(e) {
+                if (e.propertyName === 'opacity' && invitationOverlay.classList.contains('hidden')) {
+                    invitationOverlay.remove();
+                    // Remove o event listener para evitar chamadas duplicadas
+                    invitationOverlay.removeEventListener('transitionend', handler);
+                }
+            });
+        });
+    }
+});
