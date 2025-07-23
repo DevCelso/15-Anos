@@ -13,10 +13,11 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    /* Use 100vw para largura da viewport */
+    height: 100vh;
+    /* Use 100vh para altura da viewport */
     background-color: rgba(0, 0, 0, 0.7);
-    /* Fundo semi-transparente para focar no convite */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,30 +27,34 @@ body {
 }
 
 .invitation-card {
-    /* Remova width: 90% e max-width: 500px para que ele possa se expandir */
+    /* O card deve apenas conter a imagem e não ter dimensões que a distorçam */
     width: 100%;
-    /* Permite que o card ocupe a largura total do overlay */
+    /* Ocupa 100% da largura do overlay */
     height: 100%;
-    /* Permite que o card ocupe a altura total do overlay */
-    border-radius: 0;
-    /* Remova o border-radius se quiser que o convite ocupe 100% e não tenha cantos */
-    overflow: hidden;
-    box-shadow: none;
-    /* Remova a sombra se quiser que o convite ocupe 100% */
+    /* Ocupa 100% da altura do overlay */
     position: relative;
+    overflow: hidden;
+    /* Garante que a imagem cortada não vaze */
+    /* Remova border-radius e box-shadow se a imagem for cobrir 100% */
+    border-radius: 0;
+    box-shadow: none;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .invitation-card .closed-invite-img {
     width: 100%;
-    /* **ESSENCIAL**: A imagem preenche a largura do container */
+    /* A imagem preenche a largura do .invitation-card */
     height: 100%;
-    /* **ESSENCIAL**: A imagem preenche a altura do container */
+    /* A imagem preenche a altura do .invitation-card */
     display: block;
     object-fit: cover;
-    /* **ESSENCIAL**: A imagem cobrirá o espaço, cortando as bordas se necessário */
+    /* **CRÍTICO**: A imagem cobrirá o espaço sem distorção, cortando o excesso */
     object-position: center;
     /* Centraliza a imagem se ela for cortada */
+    /* Adicione estas propriedades para garantir que a imagem não seja distorcida por flex-shrink */
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .click-to-open {
@@ -63,10 +68,8 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
     animation: pulse 1.5s infinite;
     z-index: 10;
-    /* Garante que o texto fique acima da imagem */
 }
 
-/* Animação para o texto "Clique para abrir!" */
 @keyframes pulse {
     0% {
         transform: translateX(-50%) scale(1);
@@ -84,7 +87,6 @@ body {
     }
 }
 
-/* Classes para controlar a abertura */
 .invitation-overlay.hidden {
     opacity: 0;
     visibility: hidden;
@@ -93,11 +95,10 @@ body {
 
 .invitation-card.open {
     transform: scale(1.05) rotateY(15deg);
-    /* Ajuste a animação se quiser algo diferente para cobrir a tela */
     opacity: 0;
 }
 
-/* Responsividade (ajustes menores, pois já está 100% por padrão) */
+/* Responsividade - Ajuste para telas menores se necessário, mas o "cover" já ajuda */
 @media screen and (max-width: 768px) {
     .click-to-open {
         font-size: 1rem;
@@ -105,6 +106,7 @@ body {
     }
 }
 
+/*Fim Envelope*/
 
 .hero {
     padding: 40px 20px;
