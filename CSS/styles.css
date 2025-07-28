@@ -8,6 +8,7 @@ body {
 }
 
 
+
 /* Estilos para o Convite de Abertura */
 #invitation-overlay {
     position: fixed;
@@ -105,8 +106,9 @@ body {
         bottom: 10px;
     }
 }
-
 /*Fim Envelope*/
+
+
 
 .hero {
     padding: 40px 20px;
@@ -153,8 +155,9 @@ h1 {
     font-size: 1.1rem;
 }
 
-/*Carrossel*/
 
+
+/*Carrossel*/
 /* Estilos para a seção geral da galeria */
 section#galeria {
     margin: 0 auto;
@@ -243,15 +246,12 @@ section#galeria {
     box-shadow: 0 0 20px #fff0ff, 0 0 30px #b2a8f9;
 }
 
-
-
 .event-date {
     font-size: 1.1rem;
     color: #333;
     margin-top: 10px;
     font-weight: 500;
 }
-
 
 /* Estilos para os botões de navegação (Anterior/Próximo) */
 .carousel-nav-btn {
@@ -351,7 +351,191 @@ section#galeria {
         font-size: 1.2rem;
     }
 }
+/* Fim Carrossel */
 
+
+
+/* Seção do Local da Festa */
+#local-festa {
+    margin: 40px auto; /* Espaçamento e centralização */
+    padding: 30px 20px;
+    max-width: 800px; /* Largura máxima, alinhado com a galeria */
+    /* background-color: #ffffff; Fundo branco ou claro para destacar */
+    /* border-radius: 15px;
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); Brilho suave */
+    text-align: center; /* Centraliza o texto */
+    color: #333;
+}
+
+#local-festa h2 {
+    color: #4a90e2; /* Cor azul dos seus títulos */
+    font-family: 'Rouge Script', cursive; /* Sua fonte de princesa */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#local-festa p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.local-info h3 {
+    color: #4a90e2;
+    font-family: 'Rouge Script', cursive; 
+    font-size: 1.8rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.local-info p {
+    margin-bottom: 5px; /* Reduz espaço entre as linhas de endereço */
+}
+
+/* Estilos para o botão "Ver no Google Maps" */
+.btn-mapa {
+    display: inline-block; /* Permite espaçamento e fundo */
+    background-color: #4a90e2; /* Cor de botão principal */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px; /* Botão arredondado */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-mapa:hover {
+    background-color: #3a7bd2; /* Cor mais escura no hover */
+    transform: translateY(-2px); /* Efeito de "levantar" */
+}
+
+/* Contêiner para o mapa responsivo */
+.mapa-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 (altura / largura * 100) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #f0f0f0; /* Fundo para carregar o mapa */
+    border-radius: 10px; /* Borda arredondada para o mapa */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mapa-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa 100% da largura do contêiner responsivo */
+    height: 100%; /* Ocupa 100% da altura do contêiner responsivo */
+    border: 0;
+}
+
+/* Responsividade para a seção do local */
+@media screen and (max-width: 768px) {
+    #local-festa {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+    #local-festa h2 {
+        font-size: 3rem;
+    }
+    .local-info h3 {
+        font-size: 3rem;
+    }
+    .btn-mapa {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+/*Fim Seção do Local da Festa */
+
+
+
+/* Album de fotos */
+/* Seção do Álbum de Fotos */
+#album-fotos {
+    margin: 40px auto;
+    padding: 30px 20px;
+    max-width: 800px;
+    /* background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); */
+    text-align: center;
+    color: #333;
+}
+
+#album-fotos h2 {
+    color: #4a90e2;
+    font-family: 'Rouge Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#album-fotos p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px; /* Espaço maior antes do botão */
+}
+
+.album-links {
+    display: flex;
+    flex-direction: column; /* Para manter o botão e a instrução empilhados */
+    gap: 20px; /* Espaçamento entre o botão e a instrução */
+    align-items: center;
+    margin-top: 30px;
+}
+
+.album-links .btn-album {
+    display: inline-block;
+    background-color: #4a90e2; /* Cor principal do botão */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Largura do botão */
+    max-width: 300px; /* Largura máxima para não ficar muito grande */
+    margin-bottom: 15px; /* Adiciona um espaço extra entre o botão e a instrução */
+}
+
+.album-links .btn-album:hover {
+    background-color: #3a7bd2;
+    transform: translateY(-2px);
+}
+
+.upload-instruction {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0; /* Ajusta o margin-top, já que o gap do flexbox já espaça */
+    margin-bottom: 0; /* Remove margem inferior se não houver mais nada abaixo */
+    font-style: italic;
+    max-width: 90%; /* Limita a largura do texto para melhor leitura */
+}
+
+/* Responsividade para a seção do álbum */
+@media screen and (max-width: 768px) {
+    #album-fotos {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+    #album-fotos h2 {
+        font-size: 3rem;
+    }
+    .album-links .btn-album {
+        width: 90%;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .upload-instruction {
+        font-size: 0.9rem; /* Reduz um pouco o tamanho da fonte no mobile */
+    }
+}
+/* Fim album de fotos */
 
 
 /*Rodape*/
