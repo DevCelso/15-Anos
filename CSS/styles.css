@@ -160,20 +160,16 @@ h1 {
 /*Carrossel*/
 /* Estilos para a seção geral da galeria */
 section#galeria {
-    margin: 0 auto;
-    /* Centraliza a seção inteira */
-    width: 100%;
-    max-width: 900px;
-    /* Largura máxima para toda a seção da galeria (título + carrossel) */
-    /* Remova overflow: hidden daqui, ele vai para .slider-wrapper.slider */
-    /* Remova height daqui, ele vai para .slider-wrapper.slider */
-    /* Remova border-radius, box-shadow, background daqui, eles vão para .slider-wrapper.slider */
-    padding-top: 20px;
-    /* Espaço para o título e p */
-    padding-bottom: 20px;
-    /* Espaço para a navegação de pontinhos */
-    box-sizing: border-box;
-    /* Garante que padding seja incluído na largura */
+    margin: 40px auto; /* Espaçamento e centralização */
+    padding: 30px 20px;
+    max-width: 800px; /* Largura máxima padrão para todos os blocos */
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco transparente (30% de opacidade) */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); /* Brilho suave */
+    text-align: center;
+    color: #333;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos no width/max-width */
+
 }
 
 /* Títulos e Parágrafos (Centralizados) */
@@ -355,16 +351,34 @@ section#galeria {
 
 
 
+/*Form*/
+#rsvp{
+    margin: 40px auto; /* Espaçamento e centralização */
+    padding: 30px 20px;
+    max-width: 800px; /* Largura máxima padrão para todos os blocos */
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco transparente (30% de opacidade) */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); /* Brilho suave */
+    text-align: center;
+    color: #333;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos no width/max-width */
+
+}
+
+
+
 /* Seção do Local da Festa */
 #local-festa {
     margin: 40px auto; /* Espaçamento e centralização */
     padding: 30px 20px;
-    max-width: 800px; /* Largura máxima, alinhado com a galeria */
-    /* background-color: #ffffff; Fundo branco ou claro para destacar */
-    /* border-radius: 15px;
-    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); Brilho suave */
-    text-align: center; /* Centraliza o texto */
+    max-width: 800px; /* Largura máxima padrão para todos os blocos */
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco transparente (30% de opacidade) */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); /* Brilho suave */
+    text-align: center;
     color: #333;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos no width/max-width */
+
 }
 
 #local-festa h2 {
@@ -383,7 +397,7 @@ section#galeria {
 .local-info h3 {
     color: #4a90e2;
     font-family: 'Rouge Script', cursive; 
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-top: 25px;
     margin-bottom: 10px;
 }
@@ -457,14 +471,16 @@ section#galeria {
 /* Album de fotos */
 /* Seção do Álbum de Fotos */
 #album-fotos {
-    margin: 40px auto;
+    margin: 40px auto; /* Espaçamento e centralização */
     padding: 30px 20px;
-    max-width: 800px;
-    /* background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); */
+    max-width: 800px; /* Largura máxima padrão para todos os blocos */
+    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco transparente (30% de opacidade) */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); /* Brilho suave */
     text-align: center;
     color: #333;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos no width/max-width */
+
 }
 
 #album-fotos h2 {
