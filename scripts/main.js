@@ -138,43 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Brilhos
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Lógica para mostrar/esconder local da festa (mantida) ---
-    const localFestaSection = document.getElementById('local-festa');
-
-    function getParameterByName(name, url = window.location.href) {
-        name = name.replace(/[\[\]]/g, '\\$&');
-        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
-
-    const status = getParameterByName('status');
-
-    if (localFestaSection) {
-        if (status === 'confirmado') {
-            localFestaSection.style.display = 'block';
-        } else {
-            localFestaSection.style.display = 'none';
-        }
-    }
-
-    // --- Lógica para Convite de Abertura (mantida) ---
-    const invitationOverlay = document.getElementById('invitation-overlay');
-    const invitationCard = document.querySelector('.invitation-card');
-
-    if (invitationOverlay) {
-        invitationOverlay.addEventListener('click', () => {
-            if (!invitationOverlay.classList.contains('hidden')) {
-                invitationCard.classList.add('open');
-                setTimeout(() => {
-                    invitationOverlay.classList.add('hidden');
-                }, 1000); // Duração da transição do convite-card
-            }
-        });
-    }
-
     // --- NOVA LÓGICA PARA GLITTERS ANIMADOS ---
     const numGlitters = 100; // Quantidade de glitters que você quer
     const body = document.body; // Onde os glitters serão adicionados
