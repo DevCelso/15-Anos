@@ -1,10 +1,19 @@
 /* Corpo*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura/altura do elemento */
+}
+
 body {
     margin: 0;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     background-color: #f8faff;
     color: #333;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -109,10 +118,47 @@ body {
 /*Fim Envelope*/
 
 
+/*Brilho */
+/* Adicione esta animação de brilho (ou a que você já tem) */
+@keyframes sparkle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1) rotate(180deg);
+        opacity: 0.9;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Estilo para um único ponto de glitter */
+.glitter-point {
+    position: absolute; /* Será posicionado absolutamente no body */
+    background-color: rgba(255, 255, 255, 0.9); /* Cor do brilho */
+    border-radius: 50%; /* Formato redondo */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.4); /* Efeito de brilho */
+    z-index: 0; /* Para ficar atrás do conteúdo principal do site */
+    pointer-events: none; /* Para não interferir com cliques no conteúdo */
+    opacity: 0; /* Inicia invisível */
+}
+/* Fim Brilho */
+
+
 
 .hero {
     padding: 40px 20px;
     background: linear-gradient(to bottom right, #5d9ee4, #ffffff);
+    z-index: 2;
 }
 
 h1 {
@@ -120,12 +166,16 @@ h1 {
     font-size: 4rem;
     color: #4a90e2;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .frase {
     font-style: italic;
     font-size: 1.2rem;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
 }
 
 .foto-principal {
@@ -135,12 +185,16 @@ h1 {
     object-fit: cover;
     border: 4px solid #e0e0e0;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
 }
 
 .countdown {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
+    position: relative;
+    z-index: 2;
 }
 
 .secao h2 {
@@ -148,11 +202,15 @@ h1 {
     font-size: 3rem;
     margin-bottom: 10px;
     color: #4a90e2;
+    position: relative;
+    z-index: 2;
 }
 
 .secao p {
     margin-bottom: 20px;
     font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -169,7 +227,8 @@ section#galeria {
     text-align: center;
     color: #333;
     box-sizing: border-box; /* Garante que padding e border sejam incluídos no width/max-width */
-
+    position: relative;
+    z-index: 2;
 }
 
 /* Títulos e Parágrafos (Centralizados) */

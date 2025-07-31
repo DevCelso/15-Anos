@@ -133,3 +133,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+// Brilhos
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Lógica para mostrar/esconder local da festa (mantida) ---
+    const localFestaSection = document.getElementById('local-festa');
+
+    function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    const status = getParameterByName('status');
+
+    if (localFestaSection) {
+        if (status === 'confirmado') {
+            localFestaSection.style.display = 'block';
+        } else {
+            localFestaSection.style.display = 'none';
+        }
+    }
+
+    // --- Lógica para Convite de Abertura (mantida) ---
+    const invitationOverlay = document.getElementById('invitation-overlay');
+    const invitationCard = document.querySelector('.invitation-card');
+
+    if (invitationOverlay) {
+        invitationOverlay.addEventListener('click', () => {
+            if (!invitationOverlay.classList.contains('hidden')) {
+                invitationCard.classList.add('open');
+                setTimeout(() => {
+                    invitationOverlay.classList.add('hidden');
+                }, 1000); // Duração da transição do convite-card
+            }
+        });
+    }
+
+    // --- NOVA LÓGICA PARA GLITTERS ANIMADOS ---
+    const numGlitters = 100; // Quantidade de glitters que você quer
+    const body = document.body; // Onde os glitters serão adicionados
+
+    for (let i = 0; i < numGlitters; i++) {
+        const glitter = document.createElement('div'); // Cria um novo elemento div
+        glitter.classList.add('glitter-point'); // Adiciona a classe CSS
+
+        // Define um tamanho aleatório para o glitter (entre 3px e 10px, por exemplo)
+        const size = Math.random() * 7 + 3; // Tamanho entre 3 e 10
+        glitter.style.width = `${size}px`;
+        glitter.style.height = `${size}px`;
+
+        // Posiciona o glitter aleatoriamente na tela (viewport)
+        // Usamos window.innerWidth e window.innerHeight para garantir que cubra a tela inteira
+        glitter.style.left = `${Math.random() * 100}vw`; // Posição horizontal aleatória (0-100% da largura da viewport)
+        glitter.style.top = `${Math.random() * 100}vh`; // Posição vertical aleatória (0-100% da altura da viewport)
+
+        // Aplica a animação com duração e atraso aleatórios
+        const animationDuration = Math.random() * 2 + 2; // Duração entre 2s e 4s
+        const animationDelay = Math.random() * 3; // Atraso entre 0s e 3s
+        glitter.style.animation = `sparkle ${animationDuration}s infinite ease-in-out alternate`;
+        glitter.style.animationDelay = `${animationDelay}s`;
+
+        body.appendChild(glitter); // Adiciona o glitter ao body
+    }
+});
