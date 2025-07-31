@@ -306,6 +306,8 @@ section#galeria {
     color: #333;
     margin-top: 10px;
     font-weight: 500;
+    position: relative;
+    z-index: 2;
 }
 
 /* Estilos para os botões de navegação (Anterior/Próximo) */

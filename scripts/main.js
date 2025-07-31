@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Posiciona o glitter aleatoriamente na tela (viewport)
         // Usamos window.innerWidth e window.innerHeight para garantir que cubra a tela inteira
-        glitter.style.left = `${Math.random() * 100}vw`; // Posição horizontal aleatória (0-100% da largura da viewport)
+        glitter.style.left = `${Math.random() * 90}vw`; // Posição horizontal aleatória (0-100% da largura da viewport)
         glitter.style.top = `${Math.random() * 100}vh`; // Posição vertical aleatória (0-100% da altura da viewport)
 
         // Aplica a animação com duração e atraso aleatórios
@@ -164,4 +164,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         body.appendChild(glitter); // Adiciona o glitter ao body
     }
+ 
+     // --- Lógica para Convite de Abertura (ÚNICA E CORRETA) ---
+     const invitationOverlay = document.getElementById('invitation-overlay');
+     const invitationCard = document.querySelector('.invitation-card');
+ 
+     // Carrega o som de brilho
+     // Use o caminho correto aqui: 'sounds/brilho.mp3' OU 'som/brilho1.mp3'
+     const brilhoSound = new Audio('som/brilho1.mp3'); // Ajuste este caminho para o seu arquivo correto!
+ 
+     if (invitationOverlay) {
+         invitationOverlay.addEventListener('click', () => {
+             if (!invitationOverlay.classList.contains('hidden')) {
+                 // Reproduz o som de brilho
+                 brilhoSound.play();
+ 
+                 invitationCard.classList.add('open');
+                 setTimeout(() => {
+                     invitationOverlay.classList.add('hidden');
+                 }, 1000); // Duração da transição do convite-card
+             }
+         });
+     }
+
 });
