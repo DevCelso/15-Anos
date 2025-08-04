@@ -618,6 +618,60 @@ section#galeria {
 /*Rodape*/
 footer {
     padding: 20px;
-    background-color: #eaeaea;
+    background-color: transparent; /* Fundo transparente para combinar com o site */
     font-size: 0.9rem;
+    color: #444; /* Cor da fonte mais escura para contraste */
+    text-align: center; /* Centraliza o texto */
+    position: relative;
+    z-index: 2; /* Garante que o rodapé fique acima dos glitters */
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os blocos de texto */
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre a mensagem e o botão */
+}
+
+.footer-contact p {
+    margin-bottom: 0; /* Remove a margem padrão do parágrafo */
+}
+
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    padding: 10px 20px;
+    background-color: #25D366; /* Verde do WhatsApp */
+    color: white;
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold;
+    border-radius: 50px; /* Borda bem arredondada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+}
+
+.whatsapp-link:hover {
+    transform: translateY(-2px); /* Efeito de "levitar" ao passar o mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+}
+
+.whatsapp-icon {
+    width: 24px; /* Tamanho do ícone do WhatsApp */
+    height: auto;
+}
+
+/* Melhoria para a estética geral */
+p.copyright {
+    color: #888; /* Cor mais suave para o texto de direitos autorais */
+    font-size: 0.8rem;
 }
