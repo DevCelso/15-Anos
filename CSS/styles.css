@@ -2,7 +2,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura/altura do elemento */
+    box-sizing: border-box;
+    /* Garante que padding e borda sejam incluídos na largura/altura do elemento */
 }
 
 body {
@@ -69,15 +70,20 @@ body {
 
 .click-to-open {
     position: absolute;
-    bottom: 20px;
+    top: 65%;
+    /* Este valor centraliza verticalmente e desce um pouco */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    /* Centraliza horizontal e verticalmente */
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
     animation: pulse 1.5s infinite;
     z-index: 10;
+    bottom: auto;
+    /* Garante que a propriedade 'bottom' não cause conflito */
+
 }
 
 @keyframes pulse {
@@ -115,6 +121,7 @@ body {
         bottom: 10px;
     }
 }
+
 /*Fim Envelope*/
 
 
@@ -125,16 +132,20 @@ body {
         transform: scale(0) rotate(0deg);
         opacity: 0;
     }
+
     20% {
         opacity: 0.8;
     }
+
     50% {
         transform: scale(1) rotate(180deg);
         opacity: 0.9;
     }
+
     80% {
         opacity: 0.8;
     }
+
     100% {
         transform: scale(0) rotate(360deg);
         opacity: 0;
@@ -143,14 +154,22 @@ body {
 
 /* Estilo para um único ponto de glitter */
 .glitter-point {
-    position: absolute; /* Será posicionado absolutamente no body */
-    background-color: rgba(255, 255, 255, 0.9); /* Cor do brilho */
-    border-radius: 50%; /* Formato redondo */
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.4); /* Efeito de brilho */
-    z-index: 0; /* Para ficar atrás do conteúdo principal do site */
-    pointer-events: none; /* Para não interferir com cliques no conteúdo */
-    opacity: 0; /* Inicia invisível */
+    position: absolute;
+    /* Será posicionado absolutamente no body */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Cor do brilho */
+    border-radius: 50%;
+    /* Formato redondo */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.4);
+    /* Efeito de brilho */
+    z-index: 0;
+    /* Para ficar atrás do conteúdo principal do site */
+    pointer-events: none;
+    /* Para não interferir com cliques no conteúdo */
+    opacity: 0;
+    /* Inicia invisível */
 }
+
 /* Fim Brilho */
 
 
@@ -218,15 +237,21 @@ h1 {
 /*Carrossel*/
 /* Estilos para a seção geral da galeria */
 section#galeria {
-    margin: 40px auto; /* Espaçamento e centralização */
+    margin: 40px auto;
+    /* Espaçamento e centralização */
     padding: 30px 20px;
-    max-width: 800px; /* Largura máxima padrão para todos os blocos */
-    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco transparente (30% de opacidade) */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); /* Brilho suave */
+    max-width: 800px;
+    /* Largura máxima padrão para todos os blocos */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fundo branco transparente (30% de opacidade) */
+    border-radius: 15px;
+    /* Bordas arredondadas */
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6);
+    /* Brilho suave */
     text-align: center;
     color: #333;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos no width/max-width */
+    box-sizing: border-box;
+    /* Garante que padding e border sejam incluídos no width/max-width */
     position: relative;
     z-index: 2;
 }
@@ -408,21 +433,28 @@ section#galeria {
         font-size: 1.2rem;
     }
 }
+
 /* Fim Carrossel */
 
 
 
 /*Form*/
-#rsvp{
-    margin: 40px auto; /* Espaçamento e centralização */
+#rsvp {
+    margin: 40px auto;
+    /* Espaçamento e centralização */
     padding: 30px 20px;
-    max-width: 800px; /* Largura máxima padrão para todos os blocos */
-    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco transparente (30% de opacidade) */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); /* Brilho suave */
+    max-width: 800px;
+    /* Largura máxima padrão para todos os blocos */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fundo branco transparente (30% de opacidade) */
+    border-radius: 15px;
+    /* Bordas arredondadas */
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6);
+    /* Brilho suave */
     text-align: center;
     color: #333;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos no width/max-width */
+    box-sizing: border-box;
+    /* Garante que padding e border sejam incluídos no width/max-width */
 
 }
 
@@ -430,21 +462,29 @@ section#galeria {
 
 /* Seção do Local da Festa */
 #local-festa {
-    margin: 40px auto; /* Espaçamento e centralização */
+    margin: 40px auto;
+    /* Espaçamento e centralização */
     padding: 30px 20px;
-    max-width: 800px; /* Largura máxima padrão para todos os blocos */
-    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco transparente (30% de opacidade) */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); /* Brilho suave */
+    max-width: 800px;
+    /* Largura máxima padrão para todos os blocos */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fundo branco transparente (30% de opacidade) */
+    border-radius: 15px;
+    /* Bordas arredondadas */
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6);
+    /* Brilho suave */
     text-align: center;
     color: #333;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos no width/max-width */
+    box-sizing: border-box;
+    /* Garante que padding e border sejam incluídos no width/max-width */
 
 }
 
 #local-festa h2 {
-    color: #4a90e2; /* Cor azul dos seus títulos */
-    font-family: 'Rouge Script', cursive; /* Sua fonte de princesa */
+    color: #4a90e2;
+    /* Cor azul dos seus títulos */
+    font-family: 'Rouge Script', cursive;
+    /* Sua fonte de princesa */
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -457,24 +497,29 @@ section#galeria {
 
 .local-info h3 {
     color: #4a90e2;
-    font-family: 'Rouge Script', cursive; 
+    font-family: 'Rouge Script', cursive;
     font-size: 2rem;
     margin-top: 25px;
     margin-bottom: 10px;
 }
 
 .local-info p {
-    margin-bottom: 5px; /* Reduz espaço entre as linhas de endereço */
+    margin-bottom: 5px;
+    /* Reduz espaço entre as linhas de endereço */
 }
 
 /* Estilos para o botão "Ver no Google Maps" */
 .btn-mapa {
-    display: inline-block; /* Permite espaçamento e fundo */
-    background-color: #4a90e2; /* Cor de botão principal */
+    display: inline-block;
+    /* Permite espaçamento e fundo */
+    background-color: #4a90e2;
+    /* Cor de botão principal */
     color: white;
     padding: 12px 25px;
-    border-radius: 30px; /* Botão arredondado */
-    text-decoration: none; /* Remove sublinhado */
+    border-radius: 30px;
+    /* Botão arredondado */
+    text-decoration: none;
+    /* Remove sublinhado */
     font-weight: bold;
     margin-top: 25px;
     margin-bottom: 30px;
@@ -483,19 +528,24 @@ section#galeria {
 }
 
 .btn-mapa:hover {
-    background-color: #3a7bd2; /* Cor mais escura no hover */
-    transform: translateY(-2px); /* Efeito de "levantar" */
+    background-color: #3a7bd2;
+    /* Cor mais escura no hover */
+    transform: translateY(-2px);
+    /* Efeito de "levantar" */
 }
 
 /* Contêiner para o mapa responsivo */
 .mapa-container {
     position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 (altura / largura * 100) */
+    padding-bottom: 56.25%;
+    /* Proporção 16:9 (altura / largura * 100) */
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    background: #f0f0f0; /* Fundo para carregar o mapa */
-    border-radius: 10px; /* Borda arredondada para o mapa */
+    background: #f0f0f0;
+    /* Fundo para carregar o mapa */
+    border-radius: 10px;
+    /* Borda arredondada para o mapa */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -503,8 +553,10 @@ section#galeria {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Ocupa 100% da largura do contêiner responsivo */
-    height: 100%; /* Ocupa 100% da altura do contêiner responsivo */
+    width: 100%;
+    /* Ocupa 100% da largura do contêiner responsivo */
+    height: 100%;
+    /* Ocupa 100% da altura do contêiner responsivo */
     border: 0;
 }
 
@@ -514,17 +566,21 @@ section#galeria {
         padding: 20px 15px;
         margin: 20px auto;
     }
+
     #local-festa h2 {
         font-size: 3rem;
     }
+
     .local-info h3 {
         font-size: 3rem;
     }
+
     .btn-mapa {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
 }
+
 /*Fim Seção do Local da Festa */
 
 
@@ -532,15 +588,21 @@ section#galeria {
 /* Album de fotos */
 /* Seção do Álbum de Fotos */
 #album-fotos {
-    margin: 40px auto; /* Espaçamento e centralização */
+    margin: 40px auto;
+    /* Espaçamento e centralização */
     padding: 30px 20px;
-    max-width: 800px; /* Largura máxima padrão para todos os blocos */
-    background-color: rgba(255, 255, 255, 0.3); /* Fundo branco transparente (30% de opacidade) */
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6); /* Brilho suave */
+    max-width: 800px;
+    /* Largura máxima padrão para todos os blocos */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Fundo branco transparente (30% de opacidade) */
+    border-radius: 15px;
+    /* Bordas arredondadas */
+    box-shadow: 0 0 25px rgba(173, 216, 230, 0.6);
+    /* Brilho suave */
     text-align: center;
     color: #333;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos no width/max-width */
+    box-sizing: border-box;
+    /* Garante que padding e border sejam incluídos no width/max-width */
 
 }
 
@@ -554,20 +616,24 @@ section#galeria {
 #album-fotos p {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 25px; /* Espaço maior antes do botão */
+    margin-bottom: 25px;
+    /* Espaço maior antes do botão */
 }
 
 .album-links {
     display: flex;
-    flex-direction: column; /* Para manter o botão e a instrução empilhados */
-    gap: 20px; /* Espaçamento entre o botão e a instrução */
+    flex-direction: column;
+    /* Para manter o botão e a instrução empilhados */
+    gap: 20px;
+    /* Espaçamento entre o botão e a instrução */
     align-items: center;
     margin-top: 30px;
 }
 
 .album-links .btn-album {
     display: inline-block;
-    background-color: #4a90e2; /* Cor principal do botão */
+    background-color: #4a90e2;
+    /* Cor principal do botão */
     color: white;
     padding: 12px 25px;
     border-radius: 30px;
@@ -575,9 +641,12 @@ section#galeria {
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 80%; /* Largura do botão */
-    max-width: 300px; /* Largura máxima para não ficar muito grande */
-    margin-bottom: 15px; /* Adiciona um espaço extra entre o botão e a instrução */
+    width: 80%;
+    /* Largura do botão */
+    max-width: 300px;
+    /* Largura máxima para não ficar muito grande */
+    margin-bottom: 15px;
+    /* Adiciona um espaço extra entre o botão e a instrução */
 }
 
 .album-links .btn-album:hover {
@@ -588,10 +657,13 @@ section#galeria {
 .upload-instruction {
     font-size: 1rem;
     color: #555;
-    margin-top: 0; /* Ajusta o margin-top, já que o gap do flexbox já espaça */
-    margin-bottom: 0; /* Remove margem inferior se não houver mais nada abaixo */
+    margin-top: 0;
+    /* Ajusta o margin-top, já que o gap do flexbox já espaça */
+    margin-bottom: 0;
+    /* Remove margem inferior se não houver mais nada abaixo */
     font-style: italic;
-    max-width: 90%; /* Limita a largura do texto para melhor leitura */
+    max-width: 90%;
+    /* Limita a largura do texto para melhor leitura */
 }
 
 /* Responsividade para a seção do álbum */
@@ -600,30 +672,39 @@ section#galeria {
         padding: 20px 15px;
         margin: 20px auto;
     }
+
     #album-fotos h2 {
         font-size: 3rem;
     }
+
     .album-links .btn-album {
         width: 90%;
         padding: 10px 20px;
         font-size: 0.9rem;
     }
+
     .upload-instruction {
-        font-size: 0.9rem; /* Reduz um pouco o tamanho da fonte no mobile */
+        font-size: 0.9rem;
+        /* Reduz um pouco o tamanho da fonte no mobile */
     }
 }
+
 /* Fim album de fotos */
 
 
 /*Rodape*/
 footer {
     padding: 20px;
-    background-color: transparent; /* Fundo transparente para combinar com o site */
+    background-color: transparent;
+    /* Fundo transparente para combinar com o site */
     font-size: 0.9rem;
-    color: #444; /* Cor da fonte mais escura para contraste */
-    text-align: center; /* Centraliza o texto */
+    color: #444;
+    /* Cor da fonte mais escura para contraste */
+    text-align: center;
+    /* Centraliza o texto */
     position: relative;
-    z-index: 2; /* Garante que o rodapé fique acima dos glitters */
+    z-index: 2;
+    /* Garante que o rodapé fique acima dos glitters */
 }
 
 .footer-content {
@@ -632,46 +713,59 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espaçamento entre os blocos de texto */
+    gap: 20px;
+    /* Espaçamento entre os blocos de texto */
 }
 
 .footer-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Espaçamento entre a mensagem e o botão */
+    gap: 15px;
+    /* Espaçamento entre a mensagem e o botão */
 }
 
 .footer-contact p {
-    margin-bottom: 0; /* Remove a margem padrão do parágrafo */
+    margin-bottom: 0;
+    /* Remove a margem padrão do parágrafo */
 }
 
 .whatsapp-link {
     display: inline-flex;
     align-items: center;
-    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    gap: 10px;
+    /* Espaçamento entre o ícone e o texto */
     padding: 10px 20px;
-    background-color: #25D366; /* Verde do WhatsApp */
+    background-color: #25D366;
+    /* Verde do WhatsApp */
     color: white;
-    text-decoration: none; /* Remove o sublinhado do link */
+    text-decoration: none;
+    /* Remove o sublinhado do link */
     font-weight: bold;
-    border-radius: 50px; /* Borda bem arredondada */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+    border-radius: 50px;
+    /* Borda bem arredondada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra para dar profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Efeito de transição */
 }
 
 .whatsapp-link:hover {
-    transform: translateY(-2px); /* Efeito de "levitar" ao passar o mouse */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    transform: translateY(-2px);
+    /* Efeito de "levitar" ao passar o mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra mais forte */
 }
 
 .whatsapp-icon {
-    width: 24px; /* Tamanho do ícone do WhatsApp */
+    width: 24px;
+    /* Tamanho do ícone do WhatsApp */
     height: auto;
 }
 
 /* Melhoria para a estética geral */
 p.copyright {
-    color: #888; /* Cor mais suave para o texto de direitos autorais */
+    color: #888;
+    /* Cor mais suave para o texto de direitos autorais */
     font-size: 0.8rem;
 }
