@@ -183,7 +183,7 @@ body {
 h1 {
     font-family: 'Rouge Script', cursive;
     font-size: 4rem;
-    color: #4a90e2;
+    color: #236dc2;
     margin-bottom: 10px;
     position: relative;
     z-index: 2;
@@ -220,7 +220,7 @@ h1 {
     font-family: 'Rouge Script', cursive;
     font-size: 3rem;
     margin-bottom: 10px;
-    color: #4a90e2;
+    color: #236dc2;
     position: relative;
     z-index: 2;
 }
@@ -259,7 +259,7 @@ section#galeria {
 /* Títulos e Parágrafos (Centralizados) */
 #galeria h2 {
     font-family: 'Rouge Script', cursive;
-    color: #4a90e2;
+    color: #236dc2;
     font-size: 3rem;
     text-align: center;
     margin-bottom: 10px;
@@ -481,7 +481,7 @@ section#galeria {
 }
 
 #local-festa h2 {
-    color: #4a90e2;
+    color: #236dc2;
     /* Cor azul dos seus títulos */
     font-family: 'Rouge Script', cursive;
     /* Sua fonte de princesa */
@@ -607,7 +607,7 @@ section#galeria {
 }
 
 #album-fotos h2 {
-    color: #4a90e2;
+    color: #236dc2;
     font-family: 'Rouge Script', cursive;
     font-size: 2.5rem;
     margin-bottom: 20px;
